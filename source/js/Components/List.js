@@ -41,7 +41,7 @@ ApiAlarmIntegration.FetchAlarms = (function ($) {
             });
 
             $(document).on('click', '[data-alarm-filter="search"]', function (e) {
-                var element = $(e.target).parents('.box-content').parent().find('.accordion');
+                var element = $(e.target).parents('.modularity-mod-alarms').parent().find('.accordion');
                 this.loadAlarms(element, true);
             }.bind(this));
 
@@ -65,10 +65,10 @@ ApiAlarmIntegration.FetchAlarms = (function ($) {
     };
 
     FetchAlarms.prototype.getFilters = function(element) {
-        var textFilter = $(element).parents('.box-content').parent().find('[data-alarm-filter="text"]').val();
-        var placeFilter = $(element).parents('.box-content').parent().find('[data-alarm-filter="place"]').val();
-        var dateFromFilter = $(element).parents('.box-content').parent().find('[data-alarm-filter="date-from"]').val();
-        var dateToFilter = $(element).parents('.box-content').parent().find('[data-alarm-filter="date-to"]').val();
+        var textFilter = $(element).parents('.mod-alarms').parent().find('[data-alarm-filter="text"]').val();
+        var placeFilter = $(element).parents('.mod-alarms').parent().find('[data-alarm-filter="place"]').val();
+        var dateFromFilter = $(element).parents('.mod-alarms').parent().find('[data-alarm-filter="date-from"]').val();
+        var dateToFilter = $(element).parents('.mod-alarms').parent().find('[data-alarm-filter="date-to"]').val();
 
         var filters = {};
 
