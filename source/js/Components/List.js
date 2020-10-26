@@ -47,9 +47,10 @@ ApiAlarmIntegration.FetchAlarms = (function ($) {
 
             $(document).on('alarms:loaded', function (e) {
                 var $alarmslist = $(e.target);
-                var hash = window.location.hash;
-                window.location.hash = '';
-                window.location.hash = hash;
+                //TODO: Evaluate the need for this seemingly redundant piece of
+                // var hash = window.location.hash;
+                // window.location.hash = '';
+                // window.location.hash = hash;
             });
             
         }.bind(this));
